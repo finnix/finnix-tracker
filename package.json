@@ -2,7 +2,9 @@
   "name": "finnix-tracker",
   "version": "0.0.1",
   "description": "Finnix BitTorrent tracker",
-  "scripts": {},
+  "scripts": {
+    "test": "node_modules/eslint/bin/eslint.js --ignore-path .gitignore ."
+  },
   "author": {
     "name": "Ryan Finnie",
     "email": "ryan@finnie.org",
