@@ -1,0 +1,25 @@
+{
+  "name": "finnix-tracker",
+  "version": "0.0.1",
+  "description": "Finnix BitTorrent tracker",
+  "scripts": {},
+  "author": {
+    "name": "Ryan Finnie",
+    "email": "ryan@finnie.org",
+    "url": "https://www.finnix.org/"
+  },
+  "license": "MPL-2.0",
+  "bin": {
+    "finnix-tracker": "./finnix-tracker.js"
+  },
+  "dependencies": {
+    "bittorrent-tracker": "^9.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0"
+  }
+}
