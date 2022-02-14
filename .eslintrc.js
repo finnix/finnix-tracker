@@ -11,6 +11,7 @@ module.exports = {
     ecmaVersion: 12
   },
   rules: {
+    'quote-props': ['error', 'consistent-as-needed'],
     'comma-dangle': ['error', 'only-multiline']
   }
 }
