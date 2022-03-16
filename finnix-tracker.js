@@ -18,6 +18,7 @@ const allowedHashes = {
   '42e985574d55efa0374c32e11838a6f13b257ef2': 'finnix-121.iso',
   'ed96f7eb623063ebd916ac133fe2d7b97ef13934': 'finnix-122.iso',
   '59b0e770f7823b9c8e81322cab4049fb10182775': 'finnix-123.iso',
+  'd461e00dc3ca2bedb0b91abfc0d42700706fbec8': 'finnix-124.iso',
   '9ef4a637001395cc4d4eabf5a1585cdd272a8db1': 'finnix-86.0.iso',
   '29b7255770001358d153f6b80ea5c735aeb8f7d0': 'finnix-86.1.iso',
   '14850c1a143ce2551f76e65d071040b7972900de': 'finnix-86.2.iso',
