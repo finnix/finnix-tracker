@@ -10,7 +10,7 @@ This reduces complexity, but does mean the repo needs to be updated and a new co
 ## Usage
 
 ```
-docker run --rm --init -p 127.0.0.1:23812:8000/tcp rfinnie/finnix-tracker:latest
+docker run --rm --init -p 127.0.0.1:23812:8000/tcp ghcr.io/finnix/finnix-tracker:latest
 ```
 
 Example Apache configuration:
