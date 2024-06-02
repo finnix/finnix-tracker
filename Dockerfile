@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 COPY . /srv/finnix-tracker
 RUN cd /srv/finnix-tracker && npm install --production
