@@ -59,6 +59,7 @@ const allowedHashes = {
   '59b0e770f7823b9c8e81322cab4049fb10182775': 'finnix-123.iso',
   'd461e00dc3ca2bedb0b91abfc0d42700706fbec8': 'finnix-124.iso',
   '396cd1dcfccd459a7c23373816d115366ff5cb6e': 'finnix-125.iso',
+  'f77bf5c34fa630dc4408a6169c96d54211bad04a': 'finnix-126.iso',
 }
 
 const server = new (require('bittorrent-tracker').Server)({
