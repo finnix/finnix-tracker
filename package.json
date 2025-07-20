@@ -14,8 +14,14 @@
   "bin": {
     "finnix-tracker": "./finnix-tracker.js"
   },
+  "type": "module",
+  "exports": {
+    "bittorrent-tracker": {
+      "import": "bittorrent-tracker"
+    }
+  },
   "dependencies": {
-    "bittorrent-tracker": "^9.18.2"
+    "bittorrent-tracker": "^11.2.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

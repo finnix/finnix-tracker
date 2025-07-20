@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import { Server } from 'bittorrent-tracker'
+
 const allowedHashes = {
   '67755aa32ce33650590ce7ad0d321b52ab551c75': 'finnix-0.03.iso',
   '9ef4a637001395cc4d4eabf5a1585cdd272a8db1': 'finnix-86.0.iso',
@@ -63,7 +65,7 @@ const allowedHashes = {
   '8004e785720788b614de8de65b6b42b85e9b2d50': 'finnix-250.iso',
 }
 
-const server = new (require('bittorrent-tracker').Server)({
+const server = new Server({
   http: true,
   stats: true,
   udp: false,
