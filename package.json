@@ -1,9 +1,9 @@
 {
   "name": "finnix-tracker",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Finnix BitTorrent tracker",
   "scripts": {
-    "test": "node_modules/eslint/bin/eslint.js --ignore-path .gitignore ."
+    "test": "node_modules/eslint/bin/eslint.js ."
   },
   "author": {
     "name": "Ryan Finnie",
@@ -16,18 +16,16 @@
   },
   "type": "module",
   "exports": {
-    "bittorrent-tracker": {
-      "import": "bittorrent-tracker"
+    ".": {
+      "import": "./index.js"
     }
   },
   "dependencies": {
-    "bittorrent-tracker": "^11.2.1"
+    "bittorrent-tracker": ""
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "@eslint/js": "",
+    "eslint": "",
+    "globals": ""
   }
 }
