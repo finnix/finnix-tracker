@@ -1,3 +1,7 @@
+// SPDX-PackageSummary: finnix-tracker
+// SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+// SPDX-License-Identifier: MPL-2.0
+
 import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";

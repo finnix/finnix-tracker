@@ -1,0 +1,40 @@
+# SPDX-PackageSummary: finnix-tracker
+# SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+# SPDX-License-Identifier: MPL-2.0
+---
+fail_fast: false
+
+repos:
+  - repo: "https://github.com/pre-commit/pre-commit-hooks"
+    rev: "v4.4.0"
+    hooks:
+      - id: "check-added-large-files"
+      - id: "check-case-conflict"
+      - id: "check-executables-have-shebangs"
+      - id: "check-yaml"
+        args:
+          - "--unsafe"
+      - id: "check-json"
+      - id: "check-shebang-scripts-are-executable"
+      - id: "detect-private-key"
+      - id: "end-of-file-fixer"
+      - id: "fix-byte-order-marker"
+      - id: "trailing-whitespace"
+
+  - repo: "https://github.com/adrienverge/yamllint.git"
+    rev: "v1.32.0"
+    hooks:
+      - id: "yamllint"
+        args:
+          - "-c"
+          - ".yamllint.yml"
+
+  - repo: "https://github.com/rhysd/actionlint"
+    rev: "v1.7.7"
+    hooks:
+      - id: "actionlint"
+
+  - repo: "https://github.com/fsfe/reuse-tool"
+    rev: "v5.0.2"
+    hooks:
+      - id: "reuse"

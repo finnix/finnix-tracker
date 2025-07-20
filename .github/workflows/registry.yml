@@ -1,14 +1,19 @@
-name: Build and push registry
-on:
+# SPDX-PackageSummary: finnix-tracker
+# SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+# SPDX-License-Identifier: MPL-2.0
+---
+name: "Build and push registry"
+"on":
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
-    - uses: actions/checkout@v4
-    - name: Log in to registry
-      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
-    - name: Build image
-      run: docker image build -t ghcr.io/finnix/finnix-tracker:latest .
-    - name: Push image
-      run: docker image push ghcr.io/finnix/finnix-tracker:latest
+      - uses: "actions/checkout@v4"
+      - name: "Log in to registry"
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+      - name: "Build image"
+        run: "docker image build -t ghcr.io/finnix/finnix-tracker:latest ."
+      - name: "Push image"
+        run: "docker image push ghcr.io/finnix/finnix-tracker:latest"

@@ -35,3 +35,11 @@ Example Apache configuration:
 Note that while they both proxy to the same destination, `tracker.finnix.org` only has A records and `ipv6.tracker.finnix.org` only has AAAA records.
 Both are listed as trackers in the torrents.
 If this weren't done and `tracker.finnix.org` was both A and AAAA, a dual-stack client might default to announcing to the tracker over IPv6 and only get back IPv6 peers (potentially with many fewer options). By listing two trackers, the dual-stack client will announce over both IPv4 and IPv6.
+
+## License
+
+This document is provided under the following license:
+
+    SPDX-PackageSummary: finnix-live-build
+    SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+    SPDX-License-Identifier: CC-BY-SA-4.0
