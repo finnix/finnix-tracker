@@ -10,26 +10,49 @@ This reduces complexity, but does mean the repo needs to be updated and a new co
 ## Usage
 
 ```
-docker run --rm --init -p 127.0.0.1:23812:8000/tcp ghcr.io/finnix/finnix-tracker:latest
+docker run --rm --init -p 127.0.0.1:23812:8000/tcp ghcr.io/finnix/finnix-tracker:main
 ```
 
-Example Apache configuration:
+Example nginx configuration:
 
 ```
-<VirtualHost *:443>
-  ServerName tracker.finnix.org
-  ServerAlias ipv6.tracker.finnix.org
-  SSLEngine on
+server {
+    server_name tracker.finnix.org ipv6.tracker.finnix.org;
+    ssl_certificate /etc/letsencrypt/live/tracker.finnix.org/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/tracker.finnix.org/privkey.pem; # managed by Certbot
+    add_header Strict-Transport-Security "max-age=15768000" always;
 
-  RewriteEngine on
-  RewriteRule ^/$ /stats [PT,L]
-  RewriteRule ^/favicon.ico$ - [R=404,L]
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    listen 80;
+    listen [::]:80;
+    listen 6969;
+    listen [::]:6969;
 
-  ProxyPass / http://127.0.0.1:23812/
-  ProxyPassReverse / http://127.0.0.1:23812/
-  # bittorrent-tracker blindly trusts X-Forwarded-For, so we must strip before setting
-  RequestHeader unset X-Forwarded-For
-</VirtualHost>
+    if ($https != "on") {
+        return 301 https://$host$request_uri;
+    }
+
+    rewrite ^/$ /stats;
+    location ~ ^/favicon.ico$ {
+        return 404;
+    }
+    location / {
+        proxy_pass http://127.0.0.1:23812;
+        proxy_set_header Host $host;
+        proxy_redirect http:// https://;
+        proxy_http_version 1.1;
+
+        # bittorrent-tracker blindly trusts X-Forwarded-For, so we must not append
+        #proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Explicitly do not set these on the proxy
+        #proxy_set_header Upgrade $http_upgrade;
+        #proxy_set_header Connection $connection_upgrade;
+    }
+}
 ```
 
 Note that while they both proxy to the same destination, `tracker.finnix.org` only has A records and `ipv6.tracker.finnix.org` only has AAAA records.
