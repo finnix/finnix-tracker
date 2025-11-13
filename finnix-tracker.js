@@ -67,6 +67,7 @@ const allowedHashes = {
   '396cd1dcfccd459a7c23373816d115366ff5cb6e': 'finnix-125.iso',
   'f77bf5c34fa630dc4408a6169c96d54211bad04a': 'finnix-126.iso',
   '8004e785720788b614de8de65b6b42b85e9b2d50': 'finnix-250.iso',
+  '6db6ea68ddf751e176cbf93e8ca4d709a357f78c': 'finnix-251.iso',
 }
 
 const server = new Server({
