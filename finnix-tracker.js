@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
-// SPDX-PackageSummary: finnix-tracker
-// SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+// SPDX-PackageName: finnix-tracker
+// SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+// SPDX-PackageDownloadLocation: https://github.com/finnix/finnix-tracker
+// SPDX-FileCopyrightText: © 2025 Ryan Finnie <ryan@finnie.org>
 // SPDX-License-Identifier: MPL-2.0
 
 import { Server } from 'bittorrent-tracker'

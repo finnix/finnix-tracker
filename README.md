@@ -63,6 +63,8 @@ If this weren't done and `tracker.finnix.org` was both A and AAAA, a dual-stack 
 
 This document is provided under the following license:
 
-    SPDX-PackageSummary: finnix-live-build
-    SPDX-FileCopyrightText: Copyright (C) 2025 Ryan Finnie
+    SPDX-PackageName: finnix-tracker
+    SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
+    SPDX-PackageDownloadLocation: https://github.com/finnix/finnix-tracker
+    SPDX-FileCopyrightText: © 2025 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0
