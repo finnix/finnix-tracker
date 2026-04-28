@@ -1,6 +1,6 @@
 # SPDX-PackageName: finnix-tracker
 # SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-# SPDX-PackageDownloadLocation: https://github.com/finnix/finnix-tracker
+# SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-tracker
 # SPDX-FileCopyrightText: © 2025 Ryan Finnie <ryan@finnie.org>
 # SPDX-License-Identifier: MPL-2.0
 
