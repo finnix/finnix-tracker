@@ -12,6 +12,7 @@ steps:
   - name: "CI build"
     image: "node:alpine"
     commands: |
+      set -x
       npm install
       npm test
   - name: "Notify Mastodon if failure"
