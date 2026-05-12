@@ -13,6 +13,11 @@ steps:
     image: "node:alpine"
     commands: |
       set -x
+
+      cat <<"EOM" >~/.npmrc
+      registry=http://omniproxi.snowman.lan/npm/
+      EOM
+
       npm install
       npm test
   - name: "Notify Mastodon if failure"
