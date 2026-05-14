@@ -1,6 +1,6 @@
 # SPDX-PackageName: finnix-tracker
 # SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-# SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-tracker
+# SPDX-PackageDownloadLocation: https://forge.colobox.com/finnix/finnix-tracker
 # SPDX-FileComment: Woodpecker CI pre-commit workflow
 # SPDX-FileCopyrightText: © 2026 Ryan Finnie <ryan@finnie.org>
 # SPDX-License-Identifier: MPL-2.0

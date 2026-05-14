@@ -65,6 +65,6 @@ This document is provided under the following license:
 
     SPDX-PackageName: finnix-tracker
     SPDX-PackageSupplier: Ryan Finnie <ryan@finnie.org>
-    SPDX-PackageDownloadLocation: https://codeberg.org/finnix/finnix-tracker
+    SPDX-PackageDownloadLocation: https://forge.colobox.com/finnix/finnix-tracker
     SPDX-FileCopyrightText: © 2025 Ryan Finnie <ryan@finnie.org>
     SPDX-License-Identifier: CC-BY-SA-4.0
