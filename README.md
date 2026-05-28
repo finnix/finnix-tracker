@@ -1,5 +1,8 @@
 # Finnix BitTorrent tracker
 
+[![Git forge repository](https://img.shields.io/badge/git-forge-orange?logo=forgejo)](https://forge.colobox.com/finnix/finnix-tracker)
+[![CI pipeline status](https://woodpecker.colobox.com/api/badges/39/status.svg)](https://woodpecker.colobox.com/repos/39)
+
 This is the tracker used for Finnix's BitTorrent tracker.
 
 ## Configuration
